@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  background: #0f1117;
+  color: white;
+  display: grid;
+  place-items: center;
+}
+
+.app {
+  width: min(420px, 92vw);
+  padding: 2rem;
+  border: 1px solid #2b2f3a;
+  border-radius: 24px;
+  background: #171a23;
+  box-shadow: 0 20px 60px #0008;
+
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    margin-top: 0.4rem;
+    color: #9ca3af;
+  }
+}
+
+.reminders {
+  display: grid;
+  gap: 1rem;
+  margin-block: 2rem;
+
+  label {
+    display: grid;
+    grid-template-columns: 1fr 90px auto;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem;
+    border-radius: 16px;
+    background: #202431;
+
+    span {
+      font-weight: 700;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #3b4252;
+      border-radius: 10px;
+      background: #11141b;
+      color: white;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    small {
+      color: #9ca3af;
+    }
+  }
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  button {
+    padding: 1rem;
+    border: 0;
+    border-radius: 14px;
+    color: white;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  #startBtn {
+    background: #7c3aed;
+  }
+
+  #stopBtn {
+    background: #dc2626;
+  }
+}
+
+#status {
+  text-align: center;
+  color: #9ca3af;
+}

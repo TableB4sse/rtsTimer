@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f1117" />
+  <title>RTS Timer</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <h1>RTS Timer</h1>
+    <p class="subtitle">Peons • Scout • Armée • Ressources • Défense</p>
+
+    <section class="reminders">
+      <label>
+        <span>Peons</span>
+        <input id="peon" type="number" value="25" min="5" />
+        <small>secondes</small>
+      </label>
+
+      <label>
+        <span>Scout</span>
+        <input id="scout" type="number" value="60" min="5" />
+        <small>secondes</small>
+      </label>
+
+      <label>
+        <span>Armée</span>
+        <input id="army" type="number" value="45" min="5" />
+        <small>secondes</small>
+      </label>
+
+      <label>
+        <span>Ressources</span>
+        <input id="resources" type="number" value="30" min="5" />
+        <small>secondes</small>
+      </label>
+
+      <label>
+        <span>Défense</span>
+        <input id="defense" type="number" value="90" min="5" />
+        <small>secondes</small>
+      </label>
+    </section>
+
+    <section class="controls">
+      <button id="startBtn">Start</button>
+      <button id="stopBtn">Stop</button>
+    </section>
+
+    <p id="status">Timer arrêté</p>
+  </main>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js");
+      });
+    }
+  </script>
+</body>
+</html>

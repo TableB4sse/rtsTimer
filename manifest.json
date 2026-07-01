@@ -1,0 +1,17 @@
+{
+  "name": "RTS Timer",
+  "short_name": "RTS Timer",
+  "description": "Rappels audio pour vos parties de RTS",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f1117",
+  "theme_color": "#0f1117",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    }
+  ]
+}
