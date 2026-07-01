@@ -1,4 +1,4 @@
-const CACHE_NAME = "rts-timer-v2";
+const CACHE_NAME = "rts-timer-v5";
 
 const ASSETS = [
   "./",

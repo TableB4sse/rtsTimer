@@ -15,32 +15,88 @@
     <h1>RTS Timer</h1>
     <p class="subtitle">Peons • Scout • Armée • Ressources • Défense</p>
 
-    <section class="reminders">
-      <label>
+    <form id="addReminderForm" class="add-reminder">
+      <input
+        id="reminderName"
+        type="text"
+        placeholder="Nom du rappel"
+        maxlength="40"
+        required
+      />
+      <input
+        id="reminderTime"
+        type="number"
+        value="30"
+        min="5"
+        aria-label="Temps en secondes"
+        required
+      />
+      <input
+        id="reminderAudio"
+        type="file"
+        accept="audio/*"
+        aria-label="Fichier audio du rappel"
+        required
+      />
+      <button type="submit">Ajouter</button>
+    </form>
+
+    <section id="reminders" class="reminders">
+      <label class="reminder" data-sound="peon">
+        <input
+          class="reminder-toggle"
+          type="checkbox"
+          aria-label="Activer Peons"
+          checked
+        />
         <span>Peons</span>
         <input id="peon" type="number" value="25" min="5" />
         <small>secondes</small>
       </label>
 
-      <label>
+      <label class="reminder" data-sound="scout">
+        <input
+          class="reminder-toggle"
+          type="checkbox"
+          aria-label="Activer Scout"
+          checked
+        />
         <span>Scout</span>
         <input id="scout" type="number" value="60" min="5" />
         <small>secondes</small>
       </label>
 
-      <label>
+      <label class="reminder" data-sound="army">
+        <input
+          class="reminder-toggle"
+          type="checkbox"
+          aria-label="Activer Armée"
+          checked
+        />
         <span>Armée</span>
         <input id="army" type="number" value="45" min="5" />
         <small>secondes</small>
       </label>
 
-      <label>
+      <label class="reminder" data-sound="resources">
+        <input
+          class="reminder-toggle"
+          type="checkbox"
+          aria-label="Activer Ressources"
+          checked
+        />
         <span>Ressources</span>
         <input id="resources" type="number" value="30" min="5" />
         <small>secondes</small>
       </label>
 
-      <label>
+      <label class="reminder" data-sound="defense">
+        <input
+          class="reminder-toggle"
+          type="checkbox"
+          aria-label="Activer Défense"
+          checked
+        />
         <span>Défense</span>
         <input id="defense" type="number" value="90" min="5" />
         <small>secondes</small>

@@ -38,7 +38,7 @@ body {
 
   label {
     display: grid;
-    grid-template-columns: 1fr 90px auto;
+    grid-template-columns: auto 1fr 90px auto;
     align-items: center;
     gap: 0.8rem;
     padding: 1rem;
@@ -63,6 +63,71 @@ body {
     small {
       color: #9ca3af;
     }
+
+    .reminder-toggle {
+      appearance: none;
+      width: 42px;
+      height: 24px;
+      padding: 0;
+      border: 0;
+      border-radius: 999px;
+      background: #4b5563;
+      cursor: pointer;
+      transition: background 0.2s;
+
+      &::after {
+        display: block;
+        width: 18px;
+        height: 18px;
+        margin: 3px;
+        border-radius: 50%;
+        background: white;
+        content: "";
+        transition: transform 0.2s;
+      }
+
+      &:checked {
+        background: #7c3aed;
+
+        &::after {
+          transform: translateX(18px);
+        }
+      }
+    }
+  }
+}
+
+.add-reminder {
+  display: grid;
+  grid-template-columns: 1fr 90px;
+  gap: 0.8rem;
+  margin-top: 2rem;
+
+  input,
+  button {
+    min-width: 0;
+    padding: 0.7rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+  }
+
+  input {
+    border: 1px solid #3b4252;
+    background: #11141b;
+    color: white;
+  }
+
+  button {
+    border: 0;
+    background: #7c3aed;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  #reminderAudio,
+  button {
+    grid-column: 1 / -1;
   }
 }
 
